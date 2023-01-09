@@ -1,0 +1,100 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Homepage
+{% endblock %}
+{% block body %}
+
+	{% include "partials/header.html.twig" %}
+
+	<div class="slide" id="homepage">
+		<div class="container">
+			<div class="row">
+				<div class="left">
+					
+					<img id="logo" src={{asset('images/M.png')}} alt="mon_logo">
+					
+				</div>
+				<div class="right">
+					<div class="wrapper">
+						
+						<h3>HELLO ,</h3>
+						<h1>I'M <span>MAURINE</span></h1>
+						<h2><mark>GRAPHIC DESIGNER - WEB DEVELOPPER
+						</mark></h2>
+						<h6>WORK HARD. DO MORE.</h6>
+						
+					</div>
+				</div>
+			</div>
+				<div id="explore">
+					<button>
+						<div class="arrow">
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+						<div class="arrow">
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+						<div class="arrow">
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</button>
+					<p >EXPLORE</p> 
+			</div>	
+		</div>
+	</div>
+	<div class="slide" id="about">
+		
+		<div class="row">
+			<div class="left">
+				<div class="bloc">
+					{% for skill in skills %}
+						<div class="logos">
+							<img  src="../uploads/{{skill.image}}"  alt="{{skill.skill}}">
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="right">
+				<div class="wrapper">
+					<h2><mark>ABOUT</mark></h2>
+					<h5>Me and my skills</h5>
+					<div  id="aboutContent">
+						<div class="card">
+							<div class="skills"></div>
+							<h6>Bachelier en GRAPHISME</h6>
+							<p>> HEPH Condorcet Saint-Ghislain - Arts Appliqués (3ans)</p>
+						</div>
+						<div class="card">
+							<div class="skills"></div>
+							<h6>Bachelier en INFOGRAPHIE</h6>
+							<p>> EPSE Les Ateliers du Pixel de Marcq - Infographie (3ans)</p>
+						</div>
+						<div class="card">
+							<div class="skills"></div>
+							<h6>BES WEB DEVELOPER</h6>
+							<p>> EPSE Les Ateliers du Pixel de Marcq - Web Développement (2ans)</p>
+						</div>
+						<div class="card">
+							<div class="hobbys"></div>
+							<h6>HOBBY'S</h6>
+							<p>Dessin et illustration, cuisine, nature et animaux, photographie</p>
+						</div>
+					</div>
+					
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	{% include "partials/footer.html.twig" %}
+
+{% endblock %}

@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Rock+Salt&display=swap');
+
+/* font-family: 'M PLUS Rounded 1c', sans-serif;
+font-family: 'Rock Salt', cursive; */
+
+:root{
+    --cursive: 'Rock Salt', cursive;
+    --normal : 'Gothic A1', sans-serif;
+
+    --light: rgb(170, 226, 49);
+    --dark:rgb(8, 18, 9);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+      background-color: lightgray;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+}
+
+.slide{
+    min-height: 100vh;
+    
+    
+}
+
+.container{
+width: 100%;
+height: 100%;
+}
+
+.row{
+width: 100%;
+display: flex;
+height: 100%;
+}
+.left{
+width: 50%;
+}
+.right{
+width: 50%;
+
+}
+/* Nav ********/
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    margin-top: 15px;
+    z-index: 1000;
+}
+nav ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40%;
+}
+nav ul li{
+    text-decoration: none;
+    list-style: none;
+}
+nav ul li a{
+    color: white;
+    font-family: var(--cursive);
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* ********** HOMEPAGE ********** */
+#homepage{
+    background-color: rgb(19, 19, 19);
+    color: white;
+    height: 100vh;
+    background-image: url(../../public/images/priscilla-du-preez-6gWMviz-vSo-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#homepage .left{
+   
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+
+}
+    
+#logo{
+    width: 400px;
+    height: 400px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    opacity: 1 !important;
+    
+
+}
+#homepage .right{
+    display: flex;
+    align-items: center;
+}
+.wrapper{
+    width: 70%;
+    
+}
+.wrapper h3{
+    font-family: var(--cursive)
+}
+
+.wrapper h1, .wrapper h2, .wrapper p{
+    font-family: var(--normal);
+}
+
+.wrapper h1{
+    font-size: 54pt;
+    font-weight: bold;
+    font-family: var(--normal);
+}
+.wrapper h6{
+    margin-top: 30px;
+    font-size: 30pt;
+    font-weight: bolder;
+    font-family: var(--normal);
+}
+h1 span{
+    color: var(--light);
+}
+.wrapper h2{
+    font-size: 18pt;
+    font-weight: bold;
+    padding: 5px;
+    color: black;
+    font-family: var(--normal);
+}
+mark{
+    background-color: var(--light);
+    padding: 5px;
+}
+.wrapper p{
+    margin-top: 30px;
+    font-weight: 100;
+}
+a #more{
+    margin-top: 30px;
+    border: 2px solid var(--light);
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+    font-size: 15pt;
+    font-weight: 200;
+    font-family: var(--normal);
+    cursor: pointer;
+}
+#explore{
+    font-family: var(--normal);
+    font-size: 24pt;
+    color: white;
+    font-weight: 100;
+    margin-top: -100px;
+    bottom: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+
+#explore p{
+    margin-left: 20px;
+    position: static;
+}
+
+button{
+    width: 60px;
+    height : 60px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;display: flex;
+    display: flex;
+    flex-wrap: no-wrap;
+    align-items: center;
+
+}
+.discover:hover{
+    transform: rotate(90deg);
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    background-color: var(--light);
+}
+.arrow{
+    transform: rotate(90deg);
+    width: 100%;
+}
+
+.arrow .bar:nth-child(1){
+    transform: rotate(-45deg);
+    transform-origin: right;
+}
+.arrow .bar:nth-child(2){
+    transform: rotate(45deg);
+    transform-origin: right;
+   margin-top: -1px;
+}
+
+.arrow:nth-child(2){
+    margin-top: 20px;
+    margin-left: -100%;
+    opacity: 0.5;
+}
+.arrow:nth-child(3){
+    margin-top: 40px;
+    margin-left: -100%;
+    opacity: 0.2;
+}
+
+
+/* *************   ABOUT  */
+#about{
+    background-color: var(--dark);
+    min-height: 100vh;
+}
+#about h2{
+    font-size: 50pt;
+    font-family: var(--normal);
+    color: white;
+    padding-top: 10px;
+    width: 100%;
+    text-align: right;
+}
+#about h5{
+    width: 100%; 
+    text-align: right;
+    font-size: 24pt;
+    font-family: var(--cursive);
+    color: white;
+    margin-top: -10px;
+}
+#about .row{
+    min-height: 100% !important;
+}
+#about .left{
+    width: 30%;
+    min-height: 100vh;
+    background-image: url(../../public/images/fond.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about .bloc{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 40px;
+}
+.logos{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    margin-top: 20px;
+    width: 100%;
+}
+.logos img{
+    height: 100%;
+}
+
+#about .right{
+    width: 70%;
+    display: flex;
+    padding-top: 50px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    display: flex;
+    color: white;
+    font-family: var(--normal);
+    margin-bottom: 20px;
+}
+
+
+#aboutContent{
+    height: auto;
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    margin-top: 20px;
+    width: 45%;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 0px 10px 20px 10px ;
+}
+.card p{
+    text-align: center ;
+    margin-top: 10px;
+}
+.card h6{
+    text-align: center;
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+
+.skills{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url(../../public/images/chapeau.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    background-position: center center;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+   
+}
+
+.hobbys{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url(../../public/images/hobby.png);
+    background-size: 60px 50px;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    background-position: center center;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    
+}
+
+/* *************Footer  */
+
+footer{
+    height: auto;
+    background-color:var(--dark);
+    color: white;
+    font-family: var(--normal);
+    font-weight: 100;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#logoImg{
+    width: 80px;
+    height: 80px;
+}
+.infos{
+    text-align: center;
+}
+.network{
+    text-align: center;
+}
+.link{
+    margin-top:10px;
+}
+.links{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+@media all and (max-width:1000px){
+    #about .wrapper{
+        width: 95%;
+    }
+    #about{
+        min-height: 100vh;
+    }
+    #about h2{
+        margin-top: 100px;
+        margin-right: 20px;
+    }
+}
+@media all and (max-width: 735px){
+    #homepage{
+        height: auto;
+    }
+    #logo{
+        width: 200px;
+        height: 200px;
+    }
+    .row{
+        flex-wrap: wrap;
+    }
+    .right{
+        width: 100%;
+        margin-bottom: 200px;
+    }
+    .left{
+        width: 100%;
+        padding: 150px 0px 150px 0px;
+        box-sizing: border-box;
+    }
+    .wrapper{
+        margin: 0 auto;
+        text-align: center;
+        margin-top: -100px;
+    }
+
+    .card{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 600px){
+    #about .left{
+        width: 10%;
+    }
+    #about .right{
+        width: 90%;
+    }
+}
