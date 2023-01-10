@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les techniques{% endblock %}
+
+{% block body %}
+    <h1>Liste des techniques à votre actif</h1>
+    {% for technic in technics %}
+        <div><h3>{{technic.technic}}</h3></div>
+    {% endfor %}
+    <a href={{path('add_technic')}}>Ajouter une technique</a>
+{% endblock %}

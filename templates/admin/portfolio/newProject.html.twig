@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Nouveau projet {% endblock %}
+
+{% block body %}
+    <h1>Ajout d'un projet</h1>
+    <a href={{path('show_projects')}}> BACK</a>
+    {{form_start(myform)}}
+    {{form_end(myform)}}
+{% endblock %}

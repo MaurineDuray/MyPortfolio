@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Ajout d'une technique {% endblock %}
+
+{% block body %}
+    <h1>Ajout d'une technique</h1>
+    <a href={{path('technics')}}>BACK</a>
+    {{form_start(myform)}}
+    {{form_end(myform)}}
+{% endblock %}

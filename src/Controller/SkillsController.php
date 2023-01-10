@@ -16,7 +16,7 @@ class SkillsController extends AbstractController
     #[Route('/skills/', name: 'index_skills')]
     public function index(): Response
     {
-        return $this->render('skills/index.html.twig', [
+        return $this->render('admin/skills/index.html.twig', [
             'controller_name' => 'SkillsController',
         ]);
     }
@@ -64,7 +64,7 @@ class SkillsController extends AbstractController
         ]);
         }
 
-        return $this->render('skills/addSkills.html.twig', [
+        return $this->render('admin/skills/addSkills.html.twig', [
             'myform'=> $form->createView()
         ]);
     
