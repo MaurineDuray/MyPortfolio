@@ -29,6 +29,12 @@ class Projects
     #[ORM\Column(length: 255)]
     private ?string $cover = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $technics = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $slug = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +96,36 @@ class Projects
     public function setCover(string $cover): self
     {
         $this->cover = $cover;
+
+        return $this;
+    }
+
+    public function getTechnics(): ?string
+    {
+        return $this->technics;
+    }
+
+    public function setTechnics(string $technics): self
+    {
+        $this->technics = $technics;
+
+        return $this;
+    }
+    
+    public function __toString()
+    {
+        return $this->technics;
+
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }

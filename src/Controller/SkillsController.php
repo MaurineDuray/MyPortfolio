@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Skills;
 use App\Form\AddSkillsType;
+use App\Repository\SkillsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,14 +14,29 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class SkillsController extends AbstractController
 {
+
+    /**
+     * Permet d'afficher la liste des compétences 
+     *
+     * @return Response
+     */
     #[Route('/skills/', name: 'index_skills')]
-    public function index(): Response
+    public function index(SkillsRepository $repo): Response
     {
+        $skills = $repo->findAll();
+
         return $this->render('admin/skills/index.html.twig', [
-            'controller_name' => 'SkillsController',
+            'skills' => $skills,
         ]);
     }
 
+    /**
+     * Permet d'ajouter une nouvelle compétence
+     *
+     * @param Request $request
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
     #[Route('/skills/new', name:'add_skills')]
     public function addSkills(Request $request, EntityManagerInterface $manager): Response
     {

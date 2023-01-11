@@ -13,6 +13,12 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CategoryController extends AbstractController
 {
+    /**
+     * Permet d'afficher toute les catégories créées
+     *
+     * @param CategoryRepository $repo
+     * @return Response
+     */
     #[Route('/category', name: 'category')]
     public function index(CategoryRepository $repo): Response
     {
@@ -23,6 +29,13 @@ class CategoryController extends AbstractController
         ]);
     }
 
+    /**
+     * Permet d'ajouter une nouvelle catégorie
+     *
+     * @param Request $request
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
     #[Route('/category/add', name:'add_category')]
     public function addCategory(Request $request, EntityManagerInterface $manager):Response
     {

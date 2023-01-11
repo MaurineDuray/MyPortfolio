@@ -2,9 +2,12 @@
 
 namespace App\Form;
 
+use App\Entity\Category;
 use App\Entity\Projects;
-
+use App\Entity\Technics;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -19,9 +22,20 @@ class ProjectsType extends ApplicationType
         $builder
             ->add('title', TextType::class, $this->getConfiguration('Titre', 'Titre du projet'))
             ->add('date', DateType::class, $this->getConfiguration('Date de réalisation', "date"))
-            ->add('category', TextType::class, $this->getConfiguration('Catégorie', "Catégorie du projet"))
+            ->add('category', EntityType::class,[
+                'class' => Category::class,
+                'choice_label'=> 'category',
+                'label'=>"Choisissez la catégorie correspondante:"
+            ])
             ->add('description', TextType::class, $this->getConfiguration('Description', "Description du projet"))
             ->add('cover', FileType::class, $this->getConfiguration('Couverture', "fichier"))
+            ->add('technics', EntityType::class,[
+                'class' => Technics::class,
+                'choice_label'=> 'technic',
+                'label'=>"Choisissez la technique correspondante:",
+                // 'multiple' => true,
+                // 'expanded' => true,
+            ])
             ->add('submit', SubmitType::class)
         ;
     }

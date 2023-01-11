@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SkillsController!{% endblock %}
+{% block title %}Les compétences{% endblock %}
 
 {% block body %}
-
+    <h1>Liste des compétences à votre actif</h1>
+    {% for skill in skills %}
+        <div><h3>{{skill.skill}}</h3></div>
+    {% endfor %}
+    <a href={{path('add_skills')}}>Ajouter une compétence</a>
 {% endblock %}
