@@ -1,9 +1,30 @@
-<nav>
+<nav id="principal">
+	<div id="miniLogo"></div>
+	<ul>
+		<li><a href={{path("homepage")}}#homepage>Homepage</a></li>
+		<li><a href={{path("homepage")}}#about>About</a></li>
+		<li><a href={{path("portfolio")}}>Portfolio</a></li>
+		<li><a href="#contact">Contact</a></li>
+		
+	</ul>
+	
+	
+</nav>
+
+<div id="burger">
+		<div class="barre"></div>
+		<div class="barre"></div>
+		<div class="barre"></div>
+</div>
+
+<nav id="responsive">
 		<ul>
-			<li><a href={{path("homepage")}}>Homepage</a></li>
+			<li><a href={{path("homepage")}}#homepage>Homepage</a></li>
 			<li><a href={{path("homepage")}}#about>About</a></li>
 			<li><a href={{path("portfolio")}}>Portfolio</a></li>
 			<li><a href="#contact">Contact</a></li>
-            
 		</ul>
+			
+		
 </nav>
+

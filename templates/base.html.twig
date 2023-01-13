@@ -9,11 +9,30 @@
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
     </head>
     <body>
+
         {% block body %}{% endblock %}
+
+
+    {{ encore_entry_script_tags('app') }}
+        {% block javascripts %}   
+            <script>
+                console.log('test')
+
+                const burger = document.querySelector('#burger')
+                const menuResponsive = document.querySelector('#responsive')
+                burger.addEventListener('click', function(){
+                    console.log('menu cliqué')
+                    menuResponsive.classList.toggle('open')
+                })
+                
+                
+
+
+
+            </script>
+        {% endblock %}
+
     </body>
 </html>
